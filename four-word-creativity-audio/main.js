@@ -134,8 +134,43 @@ function wordAudioFile(word) {
   return "e1_word_" + slugWord(word) + ".mp3";
 }
 
+function escapeRegex(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function tokenPattern(token) {
+  const t = String(token).toLowerCase().replace(/[’]/g, "'");
+  if (t === "i'll") return "i(?:'|’)?ll";
+  return escapeRegex(t).replace(/'/g, "(?:'|’)");
+}
+
+function buildRequiredTokens(row) {
+  const heard = [row.word1, row.word2, row.word3, row.auditory_word]
+    .map(x => String(x || "").toLowerCase().replace(/[’]/g, "'"))
+    .join(" ");
+
+  const all = heard.match(/[a-z0-9']+/g) || [];
+  const skipAlways = new Set(["a", "an", "the"]);
+  const isCritical = String(row.item_type || "").toLowerCase().indexOf("critical") >= 0;
+  const out = [];
+
+  for (const tok of all) {
+    if (skipAlways.has(tok)) continue;
+    if (isCritical && tok === "does") continue;
+    if (!out.includes(tok)) out.push(tok);
+  }
+  return out;
+}
+
+function buildResponseRegex(requiredTokens) {
+  const parts = requiredTokens.map(tok => `(?=.*\\b${tokenPattern(tok)}\\b)`).join("");
+  return new RegExp(`^(?=.{15,700}$)${parts}.*$`, "i");
+}
+
 function buildProductionTrial(label, row, withFeedback = false) {
   const ambiguousAudio = (row.audio_file || "").replace(/^audio\//, "");
+  const requiredTokens = buildRequiredTokens(row);
+  const responseRegex = buildResponseRegex(requiredTokens);
   const spoken = shuffleArray([
     { word: row.word1, file: wordAudioFile(row.word1) },
     { word: row.word2, file: wordAudioFile(row.word2) },
@@ -154,9 +189,10 @@ function buildProductionTrial(label, row, withFeedback = false) {
     newVar("Timeout").set("0"),
     newVar("WordOrder").set(spokenWordOrderStr),
     newVar("SpokenFiles").set(spokenFileOrderStr),
+    newVar("RequiredTokens").set(requiredTokens.join(" | ")),
 
     newText("task",
-      "<div class='fw-card'><b>Task:</b> Listen to four spoken prompts. Then write one natural English sentence using all four prompts.</div>"
+      "<div class='fw-card'><b>Task:</b> Listen to four spoken prompts. Then write one creative English sentence using all four prompts.</div>"
     ).css({"font-size":"22px", "max-width":"1120px", "line-height":"1.4"}).center().print(),
 
     newText("auditory_label", "Listen carefully. The writing box will appear after all four prompts are played.")
@@ -209,9 +245,9 @@ function buildProductionTrial(label, row, withFeedback = false) {
       .callback(getButton("submit_sentence").click()),
     getButton("submit_sentence").wait(
       getVar("Timeout").test.is("1")
-        .or(getTextInput("response").test.text(/^.{15,700}$/))
+        .or(getTextInput("response").test.text(responseRegex))
         .failure(
-          newText("enter_error", "Please write at least 15 characters.")
+          newText("enter_error", "Please write at least 15 characters and include all spoken prompts.")
             .color("crimson")
             .center()
             .print()
@@ -247,6 +283,7 @@ function buildProductionTrial(label, row, withFeedback = false) {
   .log("audio_file", row.audio_file)
   .log("word_order_spoken", getVar("WordOrder"))
   .log("spoken_files", getVar("SpokenFiles"))
+  .log("required_tokens", getVar("RequiredTokens"))
   .log("Timeout", getVar("Timeout"))
   .log("RT", getVar("RT"))
   .log("DecisionRT_ms", getVar("RT"));
@@ -263,7 +300,7 @@ newTrial("intro",
   newText(
     "<div class='fw-card'><h3>Welcome</h3>" +
     "<p>In this study, you will hear four spoken prompts on each item.</p>" +
-    "<p>Your task is to write one natural English sentence using all four prompts.</p>" +
+    "<p>Your task is to write one creative English sentence using all four prompts.</p>" +
     "<p>You have up to <b>3 minutes</b> to submit each sentence.</p>" +
     "<p>Please complete the study on a computer in a quiet setting.</p></div>"
   ).css({"font-size":"22px", "max-width":"1120px", "line-height":"1.45"}).center().print(),
@@ -339,7 +376,7 @@ newTrial("instructions",
     "<div class='fw-card'><h3>Instructions</h3>" +
     "<p>On each item:</p>" +
     "<p>1) Listen to the four prompt words (spoken in random order).</p>" +
-    "<p>2) Write one sentence that includes all four prompts.</p>" +
+    "<p>2) Write one creative sentence that includes all four prompts.</p>" +
     "<p>3) Press <b>Enter</b> to submit.</p>" +
     "<p>You have up to <b>3 minutes</b> per item.</p></div>"
   ).css({"font-size":"22px", "max-width":"1120px", "line-height":"1.45"}).center().print(),
@@ -359,7 +396,7 @@ Template("practice.csv", row => buildProductionTrial("practice", row, true));
 newTrial("pre_main",
   newText(
     "<div class='fw-card'><h3>Main Experiment</h3>" +
-    "<p>The main block starts now. Please write clear and natural sentences.</p></div>"
+    "<p>The main block starts now. Please write clear, creative, and natural sentences.</p></div>"
   ).css({"font-size":"22px"}).center().print(),
   newButton("Begin").center().print().wait()
 );
