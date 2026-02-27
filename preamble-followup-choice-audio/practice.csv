@@ -1,7 +1,7 @@
 item,cond,item_type,preamble_text,preamble_tts,preamble_audio,option_left,option_right,correct_key,expected,notes
 1,practice_sunscreen,practice,Nora packed sunscreen for the beach,Nora packed sunscreen for the beach,audio/e2_prac_01_sunscreen.mp3,She expected sunny weather,She expected snowfall,F,sun,clear practice
-2,practice_keys,practice,Ali left his keys on the table,Ali left his keys on the table,audio/e2_prac_02_keys.mp3,He found the keys at home,He left the keys on the bus,F,home,clear practice
+2,practice_keys,practice,Ali left his keys on the table,Ali left his keys on the table,audio/e2_prac_02_keys.mp3,He left the keys on the bus,He found the keys at home,J,home,clear practice
 3,practice_train,practice,Mina's train arrived ten minutes early,Mina's train arrived ten minutes early,audio/e2_prac_03_train.mp3,The train was ahead of schedule,The train was cancelled,F,ahead,clear practice
-4,practice_headphones,practice,Leo left his headphones at work,Leo left his headphones at work,audio/e2_prac_04_headphones.mp3,The headphones are at the office,The headphones are in his backpack,F,office,clear practice
+4,practice_headphones,practice,Leo left his headphones at work,Leo left his headphones at work,audio/e2_prac_04_headphones.mp3,The headphones are in his backpack,The headphones are at the office,J,office,clear practice
 5,practice_recipe,practice,The recipe says bake for twenty minutes,The recipe says bake for twenty minutes,audio/e2_prac_05_recipe.mp3,The dish needs oven time,The dish must freeze immediately,F,bake,clear practice
-6,practice_glass,practice,The cat knocked over the water glass,The cat knocked over the water glass,audio/e2_prac_06_glass.mp3,The floor got wet,The car ran out of gas,F,water,clear practice
+6,practice_glass,practice,The cat knocked over the water glass,The cat knocked over the water glass,audio/e2_prac_06_glass.mp3,The car ran out of gas,The floor got wet,J,water,clear practice

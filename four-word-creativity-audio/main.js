@@ -3,6 +3,7 @@
    ========================================================= */
 PennController.ResetPrefix(null);
 DebugOff();
+PreloadZip("https://raw.githubusercontent.com/utkuturk/phonetic-gradience/main/audio-zips/four-word-creativity-audio-audio.zip");
 
 const FOURWORD_LISTS = ["A", "B"];
 const FOURWORD_LIST_URL = (GetURLParameter("list") || "").toUpperCase();
@@ -10,6 +11,7 @@ const FOURWORD_LIST = FOURWORD_LISTS.includes(FOURWORD_LIST_URL)
   ? FOURWORD_LIST_URL
   : FOURWORD_LISTS[Math.floor(Math.random() * FOURWORD_LISTS.length)];
 const FOURWORD_ITEMS_FILE = "items_LS_" + FOURWORD_LIST + ".csv";
+const WRITE_WINDOW_MS = 180000;
 
 /* =========================================================
    HEADER
@@ -31,6 +33,8 @@ Header(
 Sequence(
   "intro",
   "consent",
+  "demo",
+  "instructions",
   "pre_practice",
   randomize("practice"),
   "pre_main",
@@ -65,38 +69,116 @@ function SepWithN(sep, main, n) {
 }
 function sepWithN(sep, main, n) { return new SepWithN(sep, main, n); }
 
-function wordsHTML(row) {
-  return [row.word1, row.word2, row.word3, row.word4]
-    .map(w => `<span style="padding:8px 12px;border:1px solid #b8bcc4;border-radius:8px;background:#f8fafc;font-size:24px;">${w}</span>`)
-    .join("&nbsp;&nbsp;");
+function ensureFourWordTheme() {
+  if (window.__fourWordThemeLoaded) return;
+  window.__fourWordThemeLoaded = true;
+  const style = document.createElement("style");
+  style.id = "fourword-theme";
+  style.textContent = `
+    body {
+      font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(155deg, #edf5ff 0%, #f7fbff 46%, #ecf7f1 100%);
+      color: #162941;
+    }
+    .fw-card {
+      max-width: 1120px;
+      margin: 12px auto;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.94);
+      border: 1px solid #d2dfef;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(17, 44, 82, 0.08);
+    }
+    button {
+      background: #1d4e8f;
+      color: #ffffff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-size: 18px;
+      box-shadow: 0 6px 16px rgba(20, 52, 94, 0.2);
+      cursor: pointer;
+    }
+    button:hover { background: #173f73; }
+    button:disabled { opacity: 0.65; cursor: default; }
+    textarea {
+      border: 1px solid #b9cadf;
+      border-radius: 10px;
+      background: #ffffff;
+    }
+  `;
+  document.head.appendChild(style);
+}
+ensureFourWordTheme();
+
+function shuffleArray(arr) {
+  const out = arr.slice();
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = out[i];
+    out[i] = out[j];
+    out[j] = tmp;
+  }
+  return out;
+}
+
+function slugWord(word) {
+  return String(word)
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
+function wordAudioFile(word) {
+  return "e1_word_" + slugWord(word) + ".mp3";
 }
 
 function buildProductionTrial(label, row, withFeedback = false) {
+  const ambiguousAudio = (row.audio_file || "").replace(/^audio\//, "");
+  const spoken = shuffleArray([
+    { word: row.word1, file: wordAudioFile(row.word1) },
+    { word: row.word2, file: wordAudioFile(row.word2) },
+    { word: row.word3, file: wordAudioFile(row.word3) },
+    { word: row.auditory_word, file: ambiguousAudio }
+  ]);
+  const spokenWordOrderStr = spoken.map(x => x.word).join(" | ");
+  const spokenFileOrderStr = spoken.map(x => x.file).join(" | ");
+  const a1 = "word_audio_1_" + row.item;
+  const a2 = "word_audio_2_" + row.item;
+  const a3 = "word_audio_3_" + row.item;
+  const a4 = "word_audio_4_" + row.item;
+
   const trial = newTrial(label,
     getVar("TrialN").set(v => v + 1),
+    newVar("Timeout").set("0"),
+    newVar("WordOrder").set(spokenWordOrderStr),
+    newVar("SpokenFiles").set(spokenFileOrderStr),
 
     newText("task",
-      "<b>Create one creative sentence</b> using all 4 prompt words. " +
-      "One prompt is intentionally phonetic/ambiguous in some items; use the interpretation you hear."
-    ).css({"font-size":"22px", "max-width":"1000px", "line-height":"1.4"}).center().print(),
+      "<div class='fw-card'><b>Task:</b> Listen to four spoken prompts. Then write one natural English sentence using all four prompts.</div>"
+    ).css({"font-size":"22px", "max-width":"1120px", "line-height":"1.4"}).center().print(),
 
-    newText("words", wordsHTML(row)).center().print(),
-
-    newText("auditory_label", "Spoken prompt:")
-      .css({"font-size":"19px", "margin-top":"1em"})
+    newText("auditory_label", "Listen carefully. The writing box will appear after all four prompts are played.")
+      .css({"font-size":"19px", "margin-top":"0.7em", "color":"#334a66"})
       .center()
       .print(),
 
-    newAudio("word_audio", row.audio_file),
-    getAudio("word_audio").play(),
-
-    newButton("Replay spoken prompt")
-      .center()
-      .print()
-      .callback(getAudio("word_audio").play()),
+    newAudio(a1, spoken[0].file),
+    getAudio(a1).play().wait("first"),
+    newTimer("w_gap_1", 170).start().wait(),
+    newAudio(a2, spoken[1].file),
+    getAudio(a2).play().wait("first"),
+    newTimer("w_gap_2", 170).start().wait(),
+    newAudio(a3, spoken[2].file),
+    getAudio(a3).play().wait("first"),
+    newTimer("w_gap_3", 170).start().wait(),
+    newAudio(a4, spoken[3].file),
+    getAudio(a4).play().wait("first"),
+    newTimer("w_gate_tail", 230).start().wait(),
 
     newText("reminder", "Type your sentence below. Minimum length: 15 characters.")
-      .css({"font-size":"18px", "margin-top":"1em"})
+      .css({"font-size":"18px", "margin-top":"0.8em"})
       .center()
       .print(),
 
@@ -108,19 +190,45 @@ function buildProductionTrial(label, row, withFeedback = false) {
       .log("validate")
       .print(),
 
+    newText("enter_hint", "Press Enter to submit.")
+      .css({"font-size":"17px", "margin-top":"0.5em", "color":"#3d526d"})
+      .center()
+      .print(),
+
     getVar("RT").set(() => Date.now()),
 
-    newButton("Submit sentence")
-      .css({"margin-top":"1em"})
-      .center()
-      .print()
-      .wait(
-        getTextInput("response")
-          .test.text(/^.{15,700}$/)
-          .failure(newText("Please write at least 15 characters.").color("crimson").center().print())
-      ),
+    newButton("submit_sentence"),
+    newTimer("write_timer", WRITE_WINDOW_MS)
+      .callback(
+        getVar("Timeout").set("1"),
+        getButton("submit_sentence").click()
+      )
+      .start(),
+    newKey("submit_enter", "Enter")
+      .log()
+      .callback(getButton("submit_sentence").click()),
+    getButton("submit_sentence").wait(
+      getVar("Timeout").test.is("1")
+        .or(getTextInput("response").test.text(/^.{15,700}$/))
+        .failure(
+          newText("enter_error", "Please write at least 15 characters.")
+            .color("crimson")
+            .center()
+            .print()
+        )
+    ),
+    getTimer("write_timer").stop(),
 
     getVar("RT").set(v => Date.now() - v),
+
+    getVar("Timeout").test.is("1")
+      .success(
+        newText("timeout_note", "Time is up. Moving to the next item.")
+          .css({"font-size":"17px", "margin-top":"0.6em", "color":"#4b5563"})
+          .center()
+          .print(),
+        newTimer("timeout_note_t", 500).start().wait()
+      ),
 
     withFeedback
       ? newText("fb", "Saved.").color("green").center().print()
@@ -137,7 +245,11 @@ function buildProductionTrial(label, row, withFeedback = false) {
   .log("word4", row.word4)
   .log("auditory_word", row.auditory_word)
   .log("audio_file", row.audio_file)
-  .log("RT", getVar("RT"));
+  .log("word_order_spoken", getVar("WordOrder"))
+  .log("spoken_files", getVar("SpokenFiles"))
+  .log("Timeout", getVar("Timeout"))
+  .log("RT", getVar("RT"))
+  .log("DecisionRT_ms", getVar("RT"));
 
   return trial;
 }
@@ -149,27 +261,95 @@ newTrial("intro",
   getVar("SID").set(makeSubjectID()),
   getVar("LIST").set(FOURWORD_LIST),
   newText(
-    "<h3>Welcome</h3>" +
-    "<p>You will get <b>4 prompt words</b> and write one creative English sentence.</p>" +
-    "<p>Critical items use two sound conditions (sound 1 vs sound 2) with the same other prompt words.</p>" +
-    "<p>You are assigned to list <b>" + FOURWORD_LIST + "</b>.</p>" +
-    "<p>Please write natural, grammatical, and original sentences.</p>"
-  ).css({"font-size":"22px", "max-width":"1000px", "line-height":"1.45"}).center().print(),
+    "<div class='fw-card'><h3>Welcome</h3>" +
+    "<p>In this study, you will hear four spoken prompts on each item.</p>" +
+    "<p>Your task is to write one natural English sentence using all four prompts.</p>" +
+    "<p>You have up to <b>3 minutes</b> to submit each sentence.</p>" +
+    "<p>Please complete the study on a computer in a quiet setting.</p></div>"
+  ).css({"font-size":"22px", "max-width":"1120px", "line-height":"1.45"}).center().print(),
   newButton("Continue").center().print().wait()
 );
 
 newTrial("consent",
   newText(
-    "<h3>Consent</h3>" +
-    "<p>By continuing, you confirm you are 18+ and consent to participate.</p>"
+    "<div class='fw-card'><h3>Consent</h3>" +
+    "<p>By continuing, you confirm that you are 18 or older and agree to participate in this research study.</p>" +
+    "<p>Researchers: <b>Utku Turk</b> and <b>Kate Mooney</b>.</p></div>"
   ).css({"font-size":"22px"}).center().print(),
   newButton("I Agree").center().print().wait()
 );
 
+newTrial("demo",
+  newText(
+    "<div class='fw-card'><h3>Demographics</h3>" +
+    "<p>Please complete the following fields before continuing.</p></div>"
+  ).css({"font-size":"22px"}).center().print(),
+
+  newText("age_label", "Age").css({"font-size":"18px","font-weight":"600","margin-top":"8px"}).center().print(),
+  newTextInput("age")
+    .size("420px","44px")
+    .css({"font-size":"18px","padding":"8px 10px"})
+    .center()
+    .log()
+    .print(),
+
+  newText("gender_label", "Gender").css({"font-size":"18px","font-weight":"600","margin-top":"8px"}).center().print(),
+  newTextInput("gender")
+    .size("420px","44px")
+    .css({"font-size":"18px","padding":"8px 10px"})
+    .center()
+    .log()
+    .print(),
+
+  newText("location_label", "Location (state/country)").css({"font-size":"18px","font-weight":"600","margin-top":"8px"}).center().print(),
+  newTextInput("location")
+    .size("420px","44px")
+    .css({"font-size":"18px","padding":"8px 10px"})
+    .center()
+    .log()
+    .print(),
+
+  newText("lang_label", "Native language").css({"font-size":"18px","font-weight":"600","margin-top":"8px"}).center().print(),
+  newTextInput("native_language")
+    .size("420px","44px")
+    .css({"font-size":"18px","padding":"8px 10px"})
+    .center()
+    .log()
+    .print(),
+
+  newButton("demo_continue", "Continue")
+    .center()
+    .print()
+    .wait(
+      getTextInput("age").test.text(/^\d+$/)
+        .and(getTextInput("gender").test.text(/\S/))
+        .and(getTextInput("location").test.text(/\S/))
+        .and(getTextInput("native_language").test.text(/\S/))
+        .failure(
+          newText("demo_error", "Please complete all fields. Age must be numeric.")
+            .color("crimson")
+            .center()
+            .print()
+        )
+    )
+);
+
+newTrial("instructions",
+  newText(
+    "<div class='fw-card'><h3>Instructions</h3>" +
+    "<p>On each item:</p>" +
+    "<p>1) Listen to the four prompt words (spoken in random order).</p>" +
+    "<p>2) Write one sentence that includes all four prompts.</p>" +
+    "<p>3) Press <b>Enter</b> to submit.</p>" +
+    "<p>You have up to <b>3 minutes</b> per item.</p></div>"
+  ).css({"font-size":"22px", "max-width":"1120px", "line-height":"1.45"}).center().print(),
+  newButton("Start Practice").center().print().wait()
+);
+
 newTrial("pre_practice",
   newText(
-    "<h3>Practice</h3>" +
-    "<p>You will complete a few practice trials first.</p>"
+    "<div class='fw-card'><h3>Practice</h3>" +
+    "<p>You will complete a short practice block first.</p></div>"
   ).css({"font-size":"22px"}).center().print(),
   newButton("Start Practice").center().print().wait()
 );
@@ -178,8 +358,8 @@ Template("practice.csv", row => buildProductionTrial("practice", row, true));
 
 newTrial("pre_main",
   newText(
-    "<h3>Main Experiment</h3>" +
-    "<p>Now the full experiment starts. Some spoken prompts are deliberately ambiguous.</p>"
+    "<div class='fw-card'><h3>Main Experiment</h3>" +
+    "<p>The main block starts now. Please write clear and natural sentences.</p></div>"
   ).css({"font-size":"22px"}).center().print(),
   newButton("Begin").center().print().wait()
 );
@@ -187,7 +367,7 @@ newTrial("pre_main",
 Template(FOURWORD_ITEMS_FILE, row => buildProductionTrial("trial", row, false));
 
 newTrial("break",
-  newText("<h3>Break</h3><p>Take a short break, then press SPACE to continue.</p>")
+  newText("<div class='fw-card'><h3>Break</h3><p>Take a short break, then press SPACE to continue.</p></div>")
     .css({"font-size":"22px"})
     .center()
     .print(),
@@ -195,7 +375,7 @@ newTrial("break",
 );
 
 newTrial("bye",
-  newText("<h3>Done</h3><p>Thank you for participating.</p>")
+  newText("<div class='fw-card'><h3>Done</h3><p>Thank you for participating in this study.</p></div>")
     .css({"font-size":"22px"})
     .center()
     .print(),

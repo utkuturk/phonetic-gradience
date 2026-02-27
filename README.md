@@ -30,9 +30,11 @@ So the core manipulation includes a small phonetic detail shifting lexical inter
 - `preamble-followup-choice-audio`
   - 2x2 critical design (`sound1/sound2` x `text1/text2`) with Latin-square lists `A/B/C/D`
   - 40 fillers (20 matching, 20 mismatching)
+  - Demo: https://farm.pcibex.net/r/uslRnl/
 - `four-word-creativity-audio`
   - 2-condition critical design (`sound1` vs `sound2`) with same other words
   - Latin-square lists `A/B`
+  - Demo: https://farm.pcibex.net/r/kneWUO/
 
 ## Design Summary
 
