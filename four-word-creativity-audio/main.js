@@ -187,6 +187,7 @@ function buildProductionTrial(label, row, withFeedback = false) {
   const trial = newTrial(label,
     getVar("TrialN").set(v => v + 1),
     newVar("Timeout").set("0"),
+    newVar("DisableTimeoutCallback").set("0"),
     newVar("WordOrder").set(spokenWordOrderStr),
     newVar("SpokenFiles").set(spokenFileOrderStr),
     newVar("RequiredTokens").set(requiredTokens.join(" | ")),
@@ -236,8 +237,12 @@ function buildProductionTrial(label, row, withFeedback = false) {
     newButton("submit_sentence"),
     newTimer("write_timer", WRITE_WINDOW_MS)
       .callback(
-        getVar("Timeout").set("1"),
-        getButton("submit_sentence").click()
+        getVar("DisableTimeoutCallback").test.is("1")
+          .success()
+          .failure(
+            getVar("Timeout").set("1"),
+            getButton("submit_sentence").click()
+          )
       )
       .start(),
     newKey("submit_enter", "Enter")
@@ -253,6 +258,7 @@ function buildProductionTrial(label, row, withFeedback = false) {
             .print()
         )
     ),
+    getVar("DisableTimeoutCallback").set("1"),
     getTimer("write_timer").stop(),
 
     getVar("RT").set(v => Date.now() - v),
