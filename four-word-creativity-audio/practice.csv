@@ -1,0 +1,7 @@
+item,cond,item_type,word1,word2,word3,word4,auditory_word,audio_file,notes
+1,practice_01_song,practice,garden,children,bright,song,song,audio/e1_prac_01_song.mp3,clear practice
+2,practice_02_lesson,practice,teacher,morning,chalk,lesson,lesson,audio/e1_prac_02_lesson.mp3,clear practice
+3,practice_03_bridge,practice,river,stone,cold,bridge,bridge,audio/e1_prac_03_bridge.mp3,clear practice
+4,practice_04_oven,practice,baker,flour,warm,oven,oven,audio/e1_prac_04_oven.mp3,clear practice
+5,practice_05_recipe,practice,kitchen,timer,careful,recipe,recipe,audio/e1_prac_05_recipe.mp3,clear practice
+6,practice_06_glass,practice,table,water,sudden,glass,glass,audio/e1_prac_06_glass.mp3,clear practice

@@ -1,0 +1,21 @@
+item,cond,item_type,word1,word2,word3,word4,auditory_word,audio_file,notes
+1,crit_01_ax_acts_s2,critical_2way,friend,story,yesterday,ax/acts,acts,audio/e1_crit_p01_s2.mp3,same visual words across sound conditions
+2,crit_02_prince_prints_s1,critical_2way,neighbor,detail,today,prince/prints,prince,audio/e1_crit_p02_s1.mp3,same visual words across sound conditions
+3,crit_03_tense_tents_s2,critical_2way,witness,report,later,tense/tents,tents,audio/e1_crit_p03_s2.mp3,same visual words across sound conditions
+4,crit_04_presence_presents_s1,critical_2way,teacher,message,again,presence/presents,presence,audio/e1_crit_p04_s1.mp3,same visual words across sound conditions
+5,crit_05_patience_patients_s2,critical_2way,speaker,note,morning,patience/patients,patients,audio/e1_crit_p05_s2.mp3,same visual words across sound conditions
+6,crit_06_sense_cents_s1,critical_2way,friend,story,yesterday,sense/cents,sense,audio/e1_crit_p06_s1.mp3,same visual words across sound conditions
+7,crit_07_dense_dents_s2,critical_2way,neighbor,detail,today,dense/dents,dents,audio/e1_crit_p07_s2.mp3,same visual words across sound conditions
+8,crit_08_mince_mints_s1,critical_2way,witness,report,later,mince/mints,mince,audio/e1_crit_p08_s1.mp3,same visual words across sound conditions
+9,crit_09_greatape_graytape_s2,critical_2way,teacher,message,again,great ape/gray tape,gray tape,audio/e1_crit_p09_s2.mp3,same visual words across sound conditions
+10,crit_10_nitrate_nightrate_s1,critical_2way,speaker,note,morning,nitrate/night rate,nitrate,audio/e1_crit_p10_s1.mp3,same visual words across sound conditions
+11,crit_11_aname_anaim_s2,critical_2way,friend,story,yesterday,a name/an aim,an aim,audio/e1_crit_p11_s2.mp3,same visual words across sound conditions
+12,crit_12_anocean_anotion_s1,critical_2way,neighbor,detail,today,an ocean/a notion,an ocean,audio/e1_crit_p12_s1.mp3,same visual words across sound conditions
+13,crit_13_aniceman_aniceman_s2,critical_2way,witness,report,later,a nice man/an ice man,an ice man,audio/e1_crit_p13_s2.mp3,same visual words across sound conditions
+14,crit_14_plumpie_plumpeye_s1,critical_2way,teacher,message,again,plum pie/plump eye,plum pie,audio/e1_crit_p14_s1.mp3,same visual words across sound conditions
+15,crit_15_peacetalks_peastalks_s2,critical_2way,speaker,note,morning,peace talks/pea stalks,pea stalks,audio/e1_crit_p15_s2.mp3,same visual words across sound conditions
+16,crit_16_gradea_grayday_s1,critical_2way,friend,story,yesterday,grade A/gray day,grade A,audio/e1_crit_p16_s1.mp3,same visual words across sound conditions
+17,crit_17_graytrain_greatrain_s2,critical_2way,neighbor,detail,today,gray train/great rain,great rain,audio/e1_crit_p17_s2.mp3,same visual words across sound conditions
+18,crit_18_illearn_ilearn_s1,critical_2way,witness,report,later,I'll earn/I learn,I'll earn,audio/e1_crit_p18_s1.mp3,same visual words across sound conditions
+19,crit_19_keepsticking_keepsticking_s2,critical_2way,teacher,message,again,keep sticking/keeps ticking,keeps ticking,audio/e1_crit_p19_s2.mp3,same visual words across sound conditions
+20,crit_20_icecream_iscream_s1,critical_2way,speaker,note,morning,ice cream/I scream,ice cream,audio/e1_crit_p20_s1.mp3,same visual words across sound conditions

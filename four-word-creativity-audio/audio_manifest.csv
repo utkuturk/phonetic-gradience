@@ -1,0 +1,47 @@
+source,cond,item_type,text,target_file,notes
+practice_1,practice_01_song,practice,song,audio/e1_prac_01_song.mp3,clear practice
+practice_2,practice_02_lesson,practice,lesson,audio/e1_prac_02_lesson.mp3,clear practice
+practice_3,practice_03_bridge,practice,bridge,audio/e1_prac_03_bridge.mp3,clear practice
+practice_4,practice_04_oven,practice,oven,audio/e1_prac_04_oven.mp3,clear practice
+practice_5,practice_05_recipe,practice,recipe,audio/e1_prac_05_recipe.mp3,clear practice
+practice_6,practice_06_glass,practice,glass,audio/e1_prac_06_glass.mp3,clear practice
+pair_01_s1,crit_01_ax_acts_s1,critical_2way,"aek<break time=""25ms""/>s",audio/e1_crit_p01_s1.mp3,critical sound token
+pair_01_s2,crit_01_ax_acts_s2,critical_2way,"aek<break time=""95ms""/>s",audio/e1_crit_p01_s2.mp3,critical sound token
+pair_02_s1,crit_02_prince_prints_s1,critical_2way,"prin<break time=""25ms""/>s",audio/e1_crit_p02_s1.mp3,critical sound token
+pair_02_s2,crit_02_prince_prints_s2,critical_2way,"prin<break time=""90ms""/>s",audio/e1_crit_p02_s2.mp3,critical sound token
+pair_03_s1,crit_03_tense_tents_s1,critical_2way,"ten<break time=""25ms""/>s",audio/e1_crit_p03_s1.mp3,critical sound token
+pair_03_s2,crit_03_tense_tents_s2,critical_2way,"ten<break time=""90ms""/>s",audio/e1_crit_p03_s2.mp3,critical sound token
+pair_04_s1,crit_04_presence_presents_s1,critical_2way,"prezen<break time=""25ms""/>s",audio/e1_crit_p04_s1.mp3,critical sound token
+pair_04_s2,crit_04_presence_presents_s2,critical_2way,"prezen<break time=""90ms""/>s",audio/e1_crit_p04_s2.mp3,critical sound token
+pair_05_s1,crit_05_patience_patients_s1,critical_2way,"pay-shen<break time=""25ms""/>s",audio/e1_crit_p05_s1.mp3,critical sound token
+pair_05_s2,crit_05_patience_patients_s2,critical_2way,"pay-shen<break time=""90ms""/>s",audio/e1_crit_p05_s2.mp3,critical sound token
+pair_06_s1,crit_06_sense_cents_s1,critical_2way,"sen<break time=""25ms""/>s",audio/e1_crit_p06_s1.mp3,critical sound token
+pair_06_s2,crit_06_sense_cents_s2,critical_2way,"sen<break time=""90ms""/>s",audio/e1_crit_p06_s2.mp3,critical sound token
+pair_07_s1,crit_07_dense_dents_s1,critical_2way,"den<break time=""25ms""/>s",audio/e1_crit_p07_s1.mp3,critical sound token
+pair_07_s2,crit_07_dense_dents_s2,critical_2way,"den<break time=""90ms""/>s",audio/e1_crit_p07_s2.mp3,critical sound token
+pair_08_s1,crit_08_mince_mints_s1,critical_2way,"min<break time=""25ms""/>s",audio/e1_crit_p08_s1.mp3,critical sound token
+pair_08_s2,crit_08_mince_mints_s2,critical_2way,"min<break time=""90ms""/>s",audio/e1_crit_p08_s2.mp3,critical sound token
+pair_09_s1,crit_09_greatape_graytape_s1,critical_2way,"great<break time=""35ms""/>ape",audio/e1_crit_p09_s1.mp3,critical sound token
+pair_09_s2,crit_09_greatape_graytape_s2,critical_2way,"gray<break time=""35ms""/>tape",audio/e1_crit_p09_s2.mp3,critical sound token
+pair_10_s1,crit_10_nitrate_nightrate_s1,critical_2way,"nigh<break time=""35ms""/>trate",audio/e1_crit_p10_s1.mp3,critical sound token
+pair_10_s2,crit_10_nitrate_nightrate_s2,critical_2way,"night<break time=""90ms""/>rate",audio/e1_crit_p10_s2.mp3,critical sound token
+pair_11_s1,crit_11_aname_anaim_s1,critical_2way,"a<break time=""25ms""/>name",audio/e1_crit_p11_s1.mp3,critical sound token
+pair_11_s2,crit_11_aname_anaim_s2,critical_2way,"an<break time=""25ms""/>aim",audio/e1_crit_p11_s2.mp3,critical sound token
+pair_12_s1,crit_12_anocean_anotion_s1,critical_2way,"an<break time=""25ms""/>ocean",audio/e1_crit_p12_s1.mp3,critical sound token
+pair_12_s2,crit_12_anocean_anotion_s2,critical_2way,"a<break time=""25ms""/>notion",audio/e1_crit_p12_s2.mp3,critical sound token
+pair_13_s1,crit_13_aniceman_aniceman_s1,critical_2way,"a<break time=""25ms""/>nice man",audio/e1_crit_p13_s1.mp3,critical sound token
+pair_13_s2,crit_13_aniceman_aniceman_s2,critical_2way,"an<break time=""25ms""/>ice man",audio/e1_crit_p13_s2.mp3,critical sound token
+pair_14_s1,crit_14_plumpie_plumpeye_s1,critical_2way,"plum<break time=""25ms""/>pie",audio/e1_crit_p14_s1.mp3,critical sound token
+pair_14_s2,crit_14_plumpie_plumpeye_s2,critical_2way,"plump<break time=""25ms""/>eye",audio/e1_crit_p14_s2.mp3,critical sound token
+pair_15_s1,crit_15_peacetalks_peastalks_s1,critical_2way,"peace<break time=""25ms""/>talks",audio/e1_crit_p15_s1.mp3,critical sound token
+pair_15_s2,crit_15_peacetalks_peastalks_s2,critical_2way,"pea<break time=""25ms""/>stalks",audio/e1_crit_p15_s2.mp3,critical sound token
+pair_16_s1,crit_16_gradea_grayday_s1,critical_2way,"grade<break time=""25ms""/>A",audio/e1_crit_p16_s1.mp3,critical sound token
+pair_16_s2,crit_16_gradea_grayday_s2,critical_2way,"gray<break time=""25ms""/>day",audio/e1_crit_p16_s2.mp3,critical sound token
+pair_17_s1,crit_17_graytrain_greatrain_s1,critical_2way,"gray<break time=""25ms""/>train",audio/e1_crit_p17_s1.mp3,critical sound token
+pair_17_s2,crit_17_graytrain_greatrain_s2,critical_2way,"great<break time=""25ms""/>rain",audio/e1_crit_p17_s2.mp3,critical sound token
+pair_18_s1,crit_18_illearn_ilearn_s1,critical_2way,"I'll<break time=""25ms""/>earn",audio/e1_crit_p18_s1.mp3,critical sound token
+pair_18_s2,crit_18_illearn_ilearn_s2,critical_2way,"I<break time=""25ms""/>learn",audio/e1_crit_p18_s2.mp3,critical sound token
+pair_19_s1,crit_19_keepsticking_keepsticking_s1,critical_2way,"keep<break time=""25ms""/>sticking",audio/e1_crit_p19_s1.mp3,critical sound token
+pair_19_s2,crit_19_keepsticking_keepsticking_s2,critical_2way,"keeps<break time=""25ms""/>ticking",audio/e1_crit_p19_s2.mp3,critical sound token
+pair_20_s1,crit_20_icecream_iscream_s1,critical_2way,"ice<break time=""25ms""/>cream",audio/e1_crit_p20_s1.mp3,critical sound token
+pair_20_s2,crit_20_icecream_iscream_s2,critical_2way,"I<break time=""25ms""/>scream",audio/e1_crit_p20_s2.mp3,critical sound token

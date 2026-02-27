@@ -1,0 +1,127 @@
+source,cond,item_type,text,target_file,notes
+practice_1,practice_sunscreen,practice,Nora packed sunscreen for the beach,audio/e2_prac_01_sunscreen.mp3,clear practice
+practice_2,practice_keys,practice,Ali left his keys on the table,audio/e2_prac_02_keys.mp3,clear practice
+practice_3,practice_train,practice,Mina's train arrived ten minutes early,audio/e2_prac_03_train.mp3,clear practice
+practice_4,practice_headphones,practice,Leo left his headphones at work,audio/e2_prac_04_headphones.mp3,clear practice
+practice_5,practice_recipe,practice,The recipe says bake for twenty minutes,audio/e2_prac_05_recipe.mp3,clear practice
+practice_6,practice_glass,practice,The cat knocked over the water glass,audio/e2_prac_06_glass.mp3,clear practice
+A_1,crit_01_ax_acts_s1_t1,critical_2x2,"In the shed, they inspected the aek<break time=""25ms""/>s near the woodpile.",audio/e2_crit_p01_c1.mp3,critical 2x2 sound-by-text
+A_2,crit_02_prince_prints_s1_t2,critical_2x2,"In the studio, they pointed to the prin<break time=""25ms""/>s on the wall.",audio/e2_crit_p02_c2.mp3,critical 2x2 sound-by-text
+A_3,crit_03_tense_tents_s2_t1,critical_2x2,"During grammar class, they discussed the ten<break time=""90ms""/>s before lunch.",audio/e2_crit_p03_c3.mp3,critical 2x2 sound-by-text
+A_4,crit_04_presence_presents_s2_t2,critical_2x2,"At the birthday party, everyone opened the prezen<break time=""90ms""/>s after dinner.",audio/e2_crit_p04_c4.mp3,critical 2x2 sound-by-text
+A_5,crit_05_patience_patients_s1_t1,critical_2x2,"During training, the coach praised their pay-shen<break time=""25ms""/>s under pressure.",audio/e2_crit_p05_c1.mp3,critical 2x2 sound-by-text
+A_6,crit_06_sense_cents_s1_t2,critical_2x2,"At the checkout, the child counted the sen<break time=""25ms""/>s on the counter.",audio/e2_crit_p06_c2.mp3,critical 2x2 sound-by-text
+A_7,crit_07_dense_dents_s2_t1,critical_2x2,"In the lab, they measured the den<break time=""90ms""/>s foam sample.",audio/e2_crit_p07_c3.mp3,critical 2x2 sound-by-text
+A_8,crit_08_mince_mints_s2_t2,critical_2x2,"After lunch, she shared the min<break time=""90ms""/>s from her bag.",audio/e2_crit_p08_c4.mp3,critical 2x2 sound-by-text
+A_9,crit_09_greatape_graytape_s1_t1,critical_2x2,"At the zoo, the guide photographed the great<break time=""35ms""/>ape near the glass.",audio/e2_crit_p09_c1.mp3,critical 2x2 sound-by-text
+A_10,crit_10_nitrate_nightrate_s1_t2,critical_2x2,"At the hotel, they compared the nigh<break time=""35ms""/>trate for late check-ins.",audio/e2_crit_p10_c2.mp3,critical 2x2 sound-by-text
+A_11,crit_11_aname_anaim_s2_t1,critical_2x2,"On the form, the team had to choose an<break time=""25ms""/>aim for the product.",audio/e2_crit_p11_c3.mp3,critical 2x2 sound-by-text
+A_12,crit_12_anocean_anotion_s2_t2,critical_2x2,"After the lecture, they discussed a<break time=""25ms""/>notion for hours.",audio/e2_crit_p12_c4.mp3,critical 2x2 sound-by-text
+A_13,crit_13_aniceman_aniceman_s1_t1,critical_2x2,"At dinner, everyone thanked a<break time=""25ms""/>nice man for helping.",audio/e2_crit_p13_c1.mp3,critical 2x2 sound-by-text
+A_14,crit_14_plumpie_plumpeye_s1_t2,critical_2x2,"At the clinic, she treated plum<break time=""25ms""/>pie with a cold pack.",audio/e2_crit_p14_c2.mp3,critical 2x2 sound-by-text
+A_15,crit_15_peacetalks_peastalks_s2_t1,critical_2x2,"On the news, they followed pea<break time=""25ms""/>stalks all week.",audio/e2_crit_p15_c3.mp3,critical 2x2 sound-by-text
+A_16,crit_16_gradea_grayday_s2_t2,critical_2x2,"From the window, the kids watched gray<break time=""25ms""/>day turn darker.",audio/e2_crit_p16_c4.mp3,critical 2x2 sound-by-text
+A_17,crit_17_graytrain_greatrain_s1_t1,critical_2x2,"From the bridge, they watched gray<break time=""25ms""/>train pass slowly.",audio/e2_crit_p17_c1.mp3,critical 2x2 sound-by-text
+A_18,crit_18_illearn_ilearn_s1_t2,critical_2x2,"At school, she said I'll<break time=""25ms""/>earn more next year.",audio/e2_crit_p18_c2.mp3,critical 2x2 sound-by-text
+A_19,crit_19_keepsticking_keepsticking_s2_t1,critical_2x2,"In winter, this drawer will keeps<break time=""25ms""/>ticking without oil.",audio/e2_crit_p19_c3.mp3,critical 2x2 sound-by-text
+A_20,crit_20_icecream_iscream_s2_t2,critical_2x2,"In haunted houses, she says I<break time=""25ms""/>scream too loudly.",audio/e2_crit_p20_c4.mp3,critical 2x2 sound-by-text
+A_21,fill_01_match,filler_match,"For breakfast, she spread butter on warm toast.",audio/e2_fill_01_match.mp3,clear matching filler
+A_22,fill_01_mismatch,filler_mismatch,"For breakfast, she spread butter on warm clouds.",audio/e2_fill_01_mismatch.mp3,clear mismatching filler
+A_23,fill_02_match,filler_match,"At the beach, they built a sand castle.",audio/e2_fill_02_match.mp3,clear matching filler
+A_24,fill_02_mismatch,filler_mismatch,"At the beach, they built a sand laptop.",audio/e2_fill_02_mismatch.mp3,clear mismatching filler
+A_25,fill_03_match,filler_match,"In winter, he wore a thick coat.",audio/e2_fill_03_match.mp3,clear matching filler
+A_26,fill_03_mismatch,filler_mismatch,"In winter, he wore a thick spoon.",audio/e2_fill_03_mismatch.mp3,clear mismatching filler
+A_27,fill_04_match,filler_match,"After dinner, we washed the dirty plates.",audio/e2_fill_04_match.mp3,clear matching filler
+A_28,fill_04_mismatch,filler_mismatch,"After dinner, we washed the dirty thunder.",audio/e2_fill_04_mismatch.mp3,clear mismatching filler
+A_29,fill_05_match,filler_match,"In class, the teacher wrote on the board.",audio/e2_fill_05_match.mp3,clear matching filler
+A_30,fill_05_mismatch,filler_mismatch,"In class, the teacher wrote on the bicycle.",audio/e2_fill_05_mismatch.mp3,clear mismatching filler
+A_31,fill_06_match,filler_match,"At night, the baby slept in the crib.",audio/e2_fill_06_match.mp3,clear matching filler
+A_32,fill_06_mismatch,filler_mismatch,"At night, the baby slept in the printer.",audio/e2_fill_06_mismatch.mp3,clear mismatching filler
+A_33,fill_07_match,filler_match,"During lunch, she drank cold water.",audio/e2_fill_07_match.mp3,clear matching filler
+A_34,fill_07_mismatch,filler_mismatch,"During lunch, she drank cold paper.",audio/e2_fill_07_mismatch.mp3,clear mismatching filler
+A_35,fill_08_match,filler_match,"On the road, they fixed the flat tire.",audio/e2_fill_08_match.mp3,clear matching filler
+A_36,fill_08_mismatch,filler_mismatch,"On the road, they fixed the flat rainbow.",audio/e2_fill_08_mismatch.mp3,clear mismatching filler
+A_37,fill_09_match,filler_match,"In the garden, we planted tomato seeds.",audio/e2_fill_09_match.mp3,clear matching filler
+A_38,fill_09_mismatch,filler_mismatch,"In the garden, we planted tomato keyboards.",audio/e2_fill_09_mismatch.mp3,clear mismatching filler
+A_39,fill_10_match,filler_match,"At the station, he missed the last train.",audio/e2_fill_10_match.mp3,clear matching filler
+A_40,fill_10_mismatch,filler_mismatch,"At the station, he missed the last volcano.",audio/e2_fill_10_mismatch.mp3,clear mismatching filler
+A_41,fill_11_match,filler_match,"In the office, she opened her laptop.",audio/e2_fill_11_match.mp3,clear matching filler
+A_42,fill_11_mismatch,filler_mismatch,"In the office, she opened her waterfall.",audio/e2_fill_11_mismatch.mp3,clear mismatching filler
+A_43,fill_12_match,filler_match,"After rain, the street looked very wet.",audio/e2_fill_12_match.mp3,clear matching filler
+A_44,fill_12_mismatch,filler_mismatch,"After rain, the street looked very violin.",audio/e2_fill_12_mismatch.mp3,clear mismatching filler
+A_45,fill_13_match,filler_match,"For dessert, they served chocolate cake.",audio/e2_fill_13_match.mp3,clear matching filler
+A_46,fill_13_mismatch,filler_mismatch,"For dessert, they served chocolate screwdriver.",audio/e2_fill_13_mismatch.mp3,clear mismatching filler
+A_47,fill_14_match,filler_match,"In the movie, the hero saved the child.",audio/e2_fill_14_match.mp3,clear matching filler
+A_48,fill_14_mismatch,filler_mismatch,"In the movie, the hero saved the microwave.",audio/e2_fill_14_mismatch.mp3,clear mismatching filler
+A_49,fill_15_match,filler_match,"Before work, he locked the front door.",audio/e2_fill_15_match.mp3,clear matching filler
+A_50,fill_15_mismatch,filler_mismatch,"Before work, he locked the front galaxy.",audio/e2_fill_15_mismatch.mp3,clear mismatching filler
+A_51,fill_16_match,filler_match,"At the clinic, they cleaned the wound carefully.",audio/e2_fill_16_match.mp3,clear matching filler
+A_52,fill_16_mismatch,filler_mismatch,"At the clinic, they cleaned the thunder carefully.",audio/e2_fill_16_mismatch.mp3,clear mismatching filler
+A_53,fill_17_match,filler_match,"On Sunday, we visited the city museum.",audio/e2_fill_17_match.mp3,clear matching filler
+A_54,fill_17_mismatch,filler_mismatch,"On Sunday, we visited the city stapler.",audio/e2_fill_17_mismatch.mp3,clear mismatching filler
+A_55,fill_18_match,filler_match,"In traffic, drivers waited at the red light.",audio/e2_fill_18_match.mp3,clear matching filler
+A_56,fill_18_mismatch,filler_mismatch,"In traffic, drivers waited at the red guitar.",audio/e2_fill_18_mismatch.mp3,clear mismatching filler
+A_57,fill_19_match,filler_match,"At school, children read a short story.",audio/e2_fill_19_match.mp3,clear matching filler
+A_58,fill_19_mismatch,filler_mismatch,"At school, children read a short sandwich.",audio/e2_fill_19_mismatch.mp3,clear mismatching filler
+A_59,fill_20_match,filler_match,"After practice, the team packed the equipment.",audio/e2_fill_20_match.mp3,clear matching filler
+A_60,fill_20_mismatch,filler_mismatch,"After practice, the team packed the moonlight.",audio/e2_fill_20_mismatch.mp3,clear mismatching filler
+B_1,crit_01_ax_acts_s1_t2,critical_2x2,"After rehearsal, they reviewed the aek<break time=""25ms""/>s from last night.",audio/e2_crit_p01_c2.mp3,critical 2x2 sound-by-text
+B_2,crit_02_prince_prints_s2_t1,critical_2x2,"At the parade, they pointed to the prin<break time=""90ms""/>s on the balcony.",audio/e2_crit_p02_c3.mp3,critical 2x2 sound-by-text
+B_3,crit_03_tense_tents_s2_t2,critical_2x2,"At the campsite, they checked the ten<break time=""90ms""/>s before sunset.",audio/e2_crit_p03_c4.mp3,critical 2x2 sound-by-text
+B_4,crit_04_presence_presents_s1_t1,critical_2x2,"At the memorial, everyone noticed her prezen<break time=""25ms""/>s in the front row.",audio/e2_crit_p04_c1.mp3,critical 2x2 sound-by-text
+B_5,crit_05_patience_patients_s1_t2,critical_2x2,"At the clinic, the nurse called the pay-shen<break time=""25ms""/>s one by one.",audio/e2_crit_p05_c2.mp3,critical 2x2 sound-by-text
+B_6,crit_06_sense_cents_s2_t1,critical_2x2,"In the debate, the plan made sen<break time=""90ms""/>s to everyone.",audio/e2_crit_p06_c3.mp3,critical 2x2 sound-by-text
+B_7,crit_07_dense_dents_s2_t2,critical_2x2,"At the garage, they examined the den<break time=""90ms""/>s on the door.",audio/e2_crit_p07_c4.mp3,critical 2x2 sound-by-text
+B_8,crit_08_mince_mints_s1_t1,critical_2x2,"In the kitchen, the chef seasoned the min<break time=""25ms""/>s for dinner.",audio/e2_crit_p08_c1.mp3,critical 2x2 sound-by-text
+B_9,crit_09_greatape_graytape_s1_t2,critical_2x2,"In the workshop, the guide photographed the great<break time=""35ms""/>ape on the box.",audio/e2_crit_p09_c2.mp3,critical 2x2 sound-by-text
+B_10,crit_10_nitrate_nightrate_s2_t1,critical_2x2,"In chemistry, they compared the night<break time=""90ms""/>rate in two solutions.",audio/e2_crit_p10_c3.mp3,critical 2x2 sound-by-text
+B_11,crit_11_aname_anaim_s2_t2,critical_2x2,"In the plan, the team had to choose an<break time=""25ms""/>aim for the product.",audio/e2_crit_p11_c4.mp3,critical 2x2 sound-by-text
+B_12,crit_12_anocean_anotion_s1_t1,critical_2x2,"From the cliff, they looked out at an<break time=""25ms""/>ocean for hours.",audio/e2_crit_p12_c1.mp3,critical 2x2 sound-by-text
+B_13,crit_13_aniceman_aniceman_s1_t2,critical_2x2,"In summer, everyone waited for a<break time=""25ms""/>nice man each morning.",audio/e2_crit_p13_c2.mp3,critical 2x2 sound-by-text
+B_14,crit_14_plumpie_plumpeye_s2_t1,critical_2x2,"At the fair, she tasted plump<break time=""25ms""/>eye with whipped cream.",audio/e2_crit_p14_c3.mp3,critical 2x2 sound-by-text
+B_15,crit_15_peacetalks_peastalks_s2_t2,critical_2x2,"In the garden, they trimmed pea<break time=""25ms""/>stalks all week.",audio/e2_crit_p15_c4.mp3,critical 2x2 sound-by-text
+B_16,crit_16_gradea_grayday_s1_t1,critical_2x2,"In the report, the inspector marked it grade<break time=""25ms""/>A.",audio/e2_crit_p16_c1.mp3,critical 2x2 sound-by-text
+B_17,crit_17_graytrain_greatrain_s1_t2,critical_2x2,"From the bridge, they watched gray<break time=""25ms""/>train flood the road.",audio/e2_crit_p17_c2.mp3,critical 2x2 sound-by-text
+B_18,crit_18_illearn_ilearn_s2_t1,critical_2x2,"At work, she said I<break time=""25ms""/>learn more next year.",audio/e2_crit_p18_c3.mp3,critical 2x2 sound-by-text
+B_19,crit_19_keepsticking_keepsticking_s2_t2,critical_2x2,"On the wall, that old clock keeps<break time=""25ms""/>ticking all night.",audio/e2_crit_p19_c4.mp3,critical 2x2 sound-by-text
+B_20,crit_20_icecream_iscream_s1_t1,critical_2x2,"After dinner, the kids asked for ice<break time=""25ms""/>cream again.",audio/e2_crit_p20_c1.mp3,critical 2x2 sound-by-text
+C_1,crit_01_ax_acts_s2_t1,critical_2x2,"In the shed, they inspected the aek<break time=""95ms""/>s near the woodpile.",audio/e2_crit_p01_c3.mp3,critical 2x2 sound-by-text
+C_2,crit_02_prince_prints_s2_t2,critical_2x2,"In the studio, they pointed to the prin<break time=""90ms""/>s on the wall.",audio/e2_crit_p02_c4.mp3,critical 2x2 sound-by-text
+C_3,crit_03_tense_tents_s1_t1,critical_2x2,"During grammar class, they discussed the ten<break time=""25ms""/>s before lunch.",audio/e2_crit_p03_c1.mp3,critical 2x2 sound-by-text
+C_4,crit_04_presence_presents_s1_t2,critical_2x2,"At the birthday party, everyone opened the prezen<break time=""25ms""/>s after dinner.",audio/e2_crit_p04_c2.mp3,critical 2x2 sound-by-text
+C_5,crit_05_patience_patients_s2_t1,critical_2x2,"During training, the coach praised their pay-shen<break time=""90ms""/>s under pressure.",audio/e2_crit_p05_c3.mp3,critical 2x2 sound-by-text
+C_6,crit_06_sense_cents_s2_t2,critical_2x2,"At the checkout, the child counted the sen<break time=""90ms""/>s on the counter.",audio/e2_crit_p06_c4.mp3,critical 2x2 sound-by-text
+C_7,crit_07_dense_dents_s1_t1,critical_2x2,"In the lab, they measured the den<break time=""25ms""/>s foam sample.",audio/e2_crit_p07_c1.mp3,critical 2x2 sound-by-text
+C_8,crit_08_mince_mints_s1_t2,critical_2x2,"After lunch, she shared the min<break time=""25ms""/>s from her bag.",audio/e2_crit_p08_c2.mp3,critical 2x2 sound-by-text
+C_9,crit_09_greatape_graytape_s2_t1,critical_2x2,"At the zoo, the guide photographed the gray<break time=""35ms""/>tape near the glass.",audio/e2_crit_p09_c3.mp3,critical 2x2 sound-by-text
+C_10,crit_10_nitrate_nightrate_s2_t2,critical_2x2,"At the hotel, they compared the night<break time=""90ms""/>rate for late check-ins.",audio/e2_crit_p10_c4.mp3,critical 2x2 sound-by-text
+C_11,crit_11_aname_anaim_s1_t1,critical_2x2,"On the form, the team had to choose a<break time=""25ms""/>name for the product.",audio/e2_crit_p11_c1.mp3,critical 2x2 sound-by-text
+C_12,crit_12_anocean_anotion_s1_t2,critical_2x2,"After the lecture, they discussed an<break time=""25ms""/>ocean for hours.",audio/e2_crit_p12_c2.mp3,critical 2x2 sound-by-text
+C_13,crit_13_aniceman_aniceman_s2_t1,critical_2x2,"At dinner, everyone thanked an<break time=""25ms""/>ice man for helping.",audio/e2_crit_p13_c3.mp3,critical 2x2 sound-by-text
+C_14,crit_14_plumpie_plumpeye_s2_t2,critical_2x2,"At the clinic, she treated plump<break time=""25ms""/>eye with a cold pack.",audio/e2_crit_p14_c4.mp3,critical 2x2 sound-by-text
+C_15,crit_15_peacetalks_peastalks_s1_t1,critical_2x2,"On the news, they followed peace<break time=""25ms""/>talks all week.",audio/e2_crit_p15_c1.mp3,critical 2x2 sound-by-text
+C_16,crit_16_gradea_grayday_s1_t2,critical_2x2,"From the window, the kids watched grade<break time=""25ms""/>A turn darker.",audio/e2_crit_p16_c2.mp3,critical 2x2 sound-by-text
+C_17,crit_17_graytrain_greatrain_s2_t1,critical_2x2,"From the bridge, they watched great<break time=""25ms""/>rain pass slowly.",audio/e2_crit_p17_c3.mp3,critical 2x2 sound-by-text
+C_18,crit_18_illearn_ilearn_s2_t2,critical_2x2,"At school, she said I<break time=""25ms""/>learn more next year.",audio/e2_crit_p18_c4.mp3,critical 2x2 sound-by-text
+C_19,crit_19_keepsticking_keepsticking_s1_t1,critical_2x2,"In winter, this drawer will keep<break time=""25ms""/>sticking without oil.",audio/e2_crit_p19_c1.mp3,critical 2x2 sound-by-text
+C_20,crit_20_icecream_iscream_s1_t2,critical_2x2,"In haunted houses, she says ice<break time=""25ms""/>cream too loudly.",audio/e2_crit_p20_c2.mp3,critical 2x2 sound-by-text
+D_1,crit_01_ax_acts_s2_t2,critical_2x2,"After rehearsal, they reviewed the aek<break time=""95ms""/>s from last night.",audio/e2_crit_p01_c4.mp3,critical 2x2 sound-by-text
+D_2,crit_02_prince_prints_s1_t1,critical_2x2,"At the parade, they pointed to the prin<break time=""25ms""/>s on the balcony.",audio/e2_crit_p02_c1.mp3,critical 2x2 sound-by-text
+D_3,crit_03_tense_tents_s1_t2,critical_2x2,"At the campsite, they checked the ten<break time=""25ms""/>s before sunset.",audio/e2_crit_p03_c2.mp3,critical 2x2 sound-by-text
+D_4,crit_04_presence_presents_s2_t1,critical_2x2,"At the memorial, everyone noticed her prezen<break time=""90ms""/>s in the front row.",audio/e2_crit_p04_c3.mp3,critical 2x2 sound-by-text
+D_5,crit_05_patience_patients_s2_t2,critical_2x2,"At the clinic, the nurse called the pay-shen<break time=""90ms""/>s one by one.",audio/e2_crit_p05_c4.mp3,critical 2x2 sound-by-text
+D_6,crit_06_sense_cents_s1_t1,critical_2x2,"In the debate, the plan made sen<break time=""25ms""/>s to everyone.",audio/e2_crit_p06_c1.mp3,critical 2x2 sound-by-text
+D_7,crit_07_dense_dents_s1_t2,critical_2x2,"At the garage, they examined the den<break time=""25ms""/>s on the door.",audio/e2_crit_p07_c2.mp3,critical 2x2 sound-by-text
+D_8,crit_08_mince_mints_s2_t1,critical_2x2,"In the kitchen, the chef seasoned the min<break time=""90ms""/>s for dinner.",audio/e2_crit_p08_c3.mp3,critical 2x2 sound-by-text
+D_9,crit_09_greatape_graytape_s2_t2,critical_2x2,"In the workshop, the guide photographed the gray<break time=""35ms""/>tape on the box.",audio/e2_crit_p09_c4.mp3,critical 2x2 sound-by-text
+D_10,crit_10_nitrate_nightrate_s1_t1,critical_2x2,"In chemistry, they compared the nigh<break time=""35ms""/>trate in two solutions.",audio/e2_crit_p10_c1.mp3,critical 2x2 sound-by-text
+D_11,crit_11_aname_anaim_s1_t2,critical_2x2,"In the plan, the team had to choose a<break time=""25ms""/>name for the product.",audio/e2_crit_p11_c2.mp3,critical 2x2 sound-by-text
+D_12,crit_12_anocean_anotion_s2_t1,critical_2x2,"From the cliff, they looked out at a<break time=""25ms""/>notion for hours.",audio/e2_crit_p12_c3.mp3,critical 2x2 sound-by-text
+D_13,crit_13_aniceman_aniceman_s2_t2,critical_2x2,"In summer, everyone waited for an<break time=""25ms""/>ice man each morning.",audio/e2_crit_p13_c4.mp3,critical 2x2 sound-by-text
+D_14,crit_14_plumpie_plumpeye_s1_t1,critical_2x2,"At the fair, she tasted plum<break time=""25ms""/>pie with whipped cream.",audio/e2_crit_p14_c1.mp3,critical 2x2 sound-by-text
+D_15,crit_15_peacetalks_peastalks_s1_t2,critical_2x2,"In the garden, they trimmed peace<break time=""25ms""/>talks all week.",audio/e2_crit_p15_c2.mp3,critical 2x2 sound-by-text
+D_16,crit_16_gradea_grayday_s2_t1,critical_2x2,"In the report, the inspector marked it gray<break time=""25ms""/>day.",audio/e2_crit_p16_c3.mp3,critical 2x2 sound-by-text
+D_17,crit_17_graytrain_greatrain_s2_t2,critical_2x2,"From the bridge, they watched great<break time=""25ms""/>rain flood the road.",audio/e2_crit_p17_c4.mp3,critical 2x2 sound-by-text
+D_18,crit_18_illearn_ilearn_s1_t1,critical_2x2,"At work, she said I'll<break time=""25ms""/>earn more next year.",audio/e2_crit_p18_c1.mp3,critical 2x2 sound-by-text
+D_19,crit_19_keepsticking_keepsticking_s1_t2,critical_2x2,"On the wall, that old clock keep<break time=""25ms""/>sticking all night.",audio/e2_crit_p19_c2.mp3,critical 2x2 sound-by-text
+D_20,crit_20_icecream_iscream_s2_t1,critical_2x2,"After dinner, the kids asked for I<break time=""25ms""/>scream again.",audio/e2_crit_p20_c3.mp3,critical 2x2 sound-by-text
